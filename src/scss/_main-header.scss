@@ -1,0 +1,35 @@
+.main-header {
+  height: 100vh;
+  background: $primary-color;
+  color: $white;
+  
+  &__content {
+    margin: 0 auto;
+    text-align: center;
+    max-width: $max-width;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  &__name {
+    font-size: 4rem;
+  }
+  &__desc {
+    margin: 20px 0;
+    font-size: 1.5rem;
+  }
+  &__social {
+    
+  }
+}
+
+@media screen and (min-height: 850px) {
+  .main-header {
+    height: 60vh;
+  }
+}
+
+// Media queries for larger screens

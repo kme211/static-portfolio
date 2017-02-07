@@ -1,0 +1,76 @@
+html {
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    background: $white;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+a {
+    color: $accent-color;
+    transition: all 0.4s;
+
+    &:hover {
+        color: $accent-color;
+        -webkit-box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.8);
+        -moz-box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.8);
+        box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.8);
+    }
+}
+
+section {
+    max-width: $max-width;
+    margin: 0 auto;
+
+    & > * {
+        margin: $margin 0;
+    }
+}
+
+.btn {
+    display: inline-block;
+    line-height: 1rem;
+    vertical-align: middle;
+    border: 1px solid $white;
+    color: $white;
+    padding: 0.75em 1.25em;
+    text-decoration: none;
+
+    &:hover {
+        border: 1px solid $accent-color;
+    }
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.icon-linkedin-square {
+    width: 0.8571415841579437em;
+}
+
+.icon-twitter {
+    width: 0.9285703301429749em;
+}
+
+.icon-github {
+    width: 0.8571436107158661em;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10% 0 40px;
+    text-transform: uppercase;
+}

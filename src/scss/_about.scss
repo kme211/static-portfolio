@@ -1,0 +1,16 @@
+.about {
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__desc {
+    margin-right: $margin;
+  }
+  
+  &__strengths {
+    font-size: 2rem;
+    text-align: right;
+    line-height: 2.5rem;
+  }
+}

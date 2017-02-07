@@ -1,0 +1,120 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  background: #EEEEEE;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+a {
+  color: #00ADB5;
+  transition: all 0.4s; }
+  a:hover {
+    color: #00ADB5;
+    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.8); }
+
+section {
+  max-width: 700px;
+  margin: 0 auto; }
+  section > * {
+    margin: 2rem 0; }
+
+.btn {
+  display: inline-block;
+  line-height: 1rem;
+  vertical-align: middle;
+  border: 1px solid #EEEEEE;
+  color: #EEEEEE;
+  padding: .75em 1.25em;
+  text-decoration: none; }
+  .btn:hover {
+    border: 1px solid #00ADB5; }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+
+.icon-linkedin-square {
+  width: 0.8571415841579437em; }
+
+.icon-twitter {
+  width: 0.9285703301429749em; }
+
+.icon-github {
+  width: 0.8571436107158661em; }
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 10% 0 40px;
+  text-transform: uppercase; }
+
+.main-header {
+  height: 100vh;
+  background: #393E46;
+  color: #EEEEEE; }
+  .main-header__content {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%; }
+  .main-header__name {
+    font-size: 4rem; }
+  .main-header__desc {
+    margin: 20px 0;
+    font-size: 1.5rem; }
+
+@media screen and (min-height: 850px) {
+  .main-header {
+    height: 60vh; } }
+
+.about__content {
+  display: flex;
+  align-items: center; }
+
+.about__desc {
+  margin-right: 2rem; }
+
+.about__strengths {
+  font-size: 2rem;
+  text-align: right;
+  line-height: 2.5rem; }
+
+.work-item {
+  width: 100%;
+  display: flex;
+  margin-bottom: 4rem; }
+  .work-item__meta {
+    order: 1;
+    margin: 0 0 0 20px; }
+    .work-item__meta > * {
+      margin-bottom: 10px; }
+  .work-item__title {
+    font-size: 1.5rem; }
+  .work-item__desc {
+    color: #3A4750; }
+  .work-item__tech-item {
+    background: #222831;
+    color: #00ADB5;
+    padding: 2.5%;
+    margin: 1% 0;
+    display: inline-block; }
+  .work-item__thumb {
+    order: 0; }
