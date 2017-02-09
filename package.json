@@ -4,12 +4,13 @@
   "description": "Personal static portfolio",
   "main": "build.js",
   "scripts": {
-    "build": "node-sass src/scss/style.scss dist/css/style.css",
+    "build": "node-sass src/scss/style.scss dist/css/style.css && node build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Keari Eggers <kungfu.keari@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^4.5.0"
+    "node-sass": "^4.5.0",
+    "nunjucks": "^3.0.0"
   }
 }
