@@ -69,17 +69,20 @@
             {% for project in work %}
             <div class="work-item">
                 <div class="work-item__meta">
-                    <h1 class="work-item__title">{{ project.title }}</h1>
+                    <h1 class="work-item__name">{{ project.name }}</h1>
                     <p class="work-item__desc">
                         {{ project.desc }}
                     </p>
+                    <p class="work-item__date">
+                        {{ project.date }}
+                    </p>
                     <ul class="work-item__tech">
-                        {% for tech in project.technologies %}
-                        <li class="work-item__tech-item">{{ tech }}</li>
+                        {% for tag in project.tags %}
+                        <li class="work-item__tech-item">{{ tag }}</li>
                         {% endfor %}
                     </ul>
                 </div>
-                <img src="{{project.imgUrl}}" alt="" class="work-item__thumb" />
+                <div  class="work-item__thumb"><img src="{{project.imgUrl}}" alt="" /></div>
             </div>
             {% endfor %}
             

@@ -5,6 +5,14 @@ ol {
   margin: 0;
   padding: 0; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
 html {
   font-size: 16px;
   font-family: Helvetica, sans-serif;
@@ -109,10 +117,11 @@ section {
   margin-bottom: 4rem; }
   .work-item__meta {
     order: 1;
-    margin: 0 0 0 20px; }
+    margin: 0 0 0 20px;
+    width: 100%; }
     .work-item__meta > * {
       margin-bottom: 10px; }
-  .work-item__title {
+  .work-item__name {
     font-size: 1.5rem; }
   .work-item__desc {
     color: #3A4750; }
@@ -123,4 +132,7 @@ section {
     margin: 1% 0;
     display: inline-block; }
   .work-item__thumb {
-    order: 0; }
+    order: 0;
+    flex: 1 0 300px; }
+    .work-item__thumb img {
+      max-width: 100%; }
