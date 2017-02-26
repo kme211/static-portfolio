@@ -1,26 +1,24 @@
 .work-item {
   width: 100%;
   display: flex;
+  flex-flow: row wrap;
   margin-bottom: 4rem;
-  
+  &>* {
+    margin: 1rem;
+  }
   &__meta {
-    order: 1;
-    margin: 0 0 0 20px;
-    width: 100%;
-    
-    & > * {
+    order: 0;
+    flex: 1 100%;
+    &>* {
       margin-bottom: 10px;
     }
   }
-  
   &__name {
     font-size: 1.5rem;
   }
-  
   &__desc {
     color: $muted-text-color;
   }
-  
   &__tech-item {
     background: $primary-color-dark;
     color: $accent-color;
@@ -28,13 +26,25 @@
     margin: 1% 0;
     display: inline-block;
   }
-  
   &__thumb {
-    order: 0;
-    flex: 1 0 300px;
-
+    order: 1;
+    flex: 1 100%;
     & img {
+      display: block;
       max-width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .work-item {
+    &__meta {
+      order: 1;
+      flex: 1;
+    }
+    &__thumb {
+      order: 0;
+      flex: 0 1 275px;
     }
   }
 }

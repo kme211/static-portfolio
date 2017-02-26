@@ -2,7 +2,7 @@
   height: 100vh;
   background: $primary-color;
   color: $white;
-  
+  padding: 0 1rem;
   &__content {
     margin: 0 auto;
     text-align: center;
@@ -13,17 +13,14 @@
     flex-direction: column;
     height: 100%;
   }
-  
   &__name {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   &__desc {
     margin: 20px 0;
     font-size: 1.5rem;
   }
-  &__social {
-    
-  }
+  &__social {}
 }
 
 @media screen and (min-height: 850px) {

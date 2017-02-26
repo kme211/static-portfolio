@@ -1,20 +1,35 @@
 .about {
   &__content {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
+    &>* {
+      margin: 1rem;
+    }
   }
-  
   &__desc {
+    flex: 1 100%;
     margin-right: $margin;
   }
-  
   &__strengths {
+    flex: 1 100%;
     font-size: 2rem;
-    text-align: right;
+    text-align: center;
     line-height: 2.5rem;
-
     & ul {
       list-style-type: none;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .about {
+    &__desc {
+      flex-basis: 450px;
+    }
+    &__strengths {
+      flex-basis: auto;
+      text-align: right;
     }
   }
 }
