@@ -4,7 +4,7 @@
   "description": "Personal static portfolio",
   "main": "build.js",
   "scripts": {
-    "build": "node build.js",
+    "dev": "nodemon build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Keari Eggers <kungfu.keari@gmail.com>",
@@ -13,9 +13,9 @@
     "chalk": "^1.1.3",
     "chokidar": "^1.6.1",
     "express": "^4.14.1",
-    "moment": "^2.17.1",
     "node-sass": "^4.5.0",
     "nodemon": "^1.11.0",
-    "nunjucks": "^3.0.0"
+    "nunjucks": "^3.0.0",
+    "yargs": "^6.6.0"
   }
 }

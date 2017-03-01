@@ -1,6 +1,6 @@
 module.exports = [{
   name: "Bender Quotes",
-  date: new Date(2017, 1, 26),
+  date: "2017-02-26",
   links: {
     code: "https://github.com/kme211/bender-quotes",
     demo: "http://bender-quotes.netlify.com/"
@@ -10,7 +10,7 @@ module.exports = [{
   tags: ["ES2015", "SCSS", "CSS Images"]
 }, {
   name: "Camper Leaderboard",
-  date: new Date(2016, 6, 3),
+  date: "2016-06-03",
   links: {
     code: "http://codepen.io/kme211/pen/jAmVVq",
     demo: "http://codepen.io/kme211/full/jAmVVq"
