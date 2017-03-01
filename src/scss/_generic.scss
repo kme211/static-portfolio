@@ -13,13 +13,11 @@ html {
 
 a {
     color: $accent-color;
+    text-decoration: none;
     transition: all 0.4s;
 
     &:hover {
-        color: $accent-color;
-        -webkit-box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.8);
-        -moz-box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.8);
-        box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.8);
+        color: darken($accent-color, 10%);
     }
 }
 
@@ -32,7 +30,7 @@ section {
     }
 }
 
-.btn {
+@mixin btn {
     display: inline-block;
     line-height: 1rem;
     vertical-align: middle;
@@ -42,8 +40,18 @@ section {
     text-decoration: none;
 
     &:hover {
+        color: $accent-color;
         border: 1px solid $accent-color;
     }
+}
+
+@mixin btn-small {
+    padding: 0.25rem 0.75rem;
+}
+
+@mixin btn-dark {
+    border: 1px solid $primary-color-dark;
+    color: $primary-color-dark;
 }
 
 .icon {

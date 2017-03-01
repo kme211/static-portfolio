@@ -2,13 +2,11 @@
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 4rem;
-  &>* {
-    margin: 1rem;
-  }
+  margin-bottom: 1rem;
   &__meta {
     order: 0;
     flex: 1 100%;
+    margin: 0 1rem 2rem 1rem;
     &>* {
       margin-bottom: 10px;
     }
@@ -16,7 +14,8 @@
   &__name {
     font-size: 1.5rem;
   }
-  &__desc {
+  &__desc,
+  &__date {
     color: $muted-text-color;
   }
   &__tech-item {
@@ -29,10 +28,12 @@
   &__thumb {
     order: 1;
     flex: 1 100%;
-    & img {
-      display: block;
-      max-width: 100%;
-    }
+    height: 200px;
+  }
+  &__code-link {
+    @include btn;
+    @include btn-small;
+    @include btn-dark; 
   }
 }
 
@@ -45,6 +46,7 @@
     &__thumb {
       order: 0;
       flex: 0 1 275px;
+      height: auto;
     }
   }
 }

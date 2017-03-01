@@ -12,6 +12,11 @@ const logError = (error) => console.log(chalk.red(error))
 
 logMsg('Build process started. env=' + argv.env)
 
+work = work.map(project => {
+    let codeIcon = project.links.code.match('codepen') ? 'icon-codepen' : 'icon-github'
+    return Object.assign({}, project, { codeIcon })
+})
+
 function compileScss(successCallback = () => {}, errCallback = () => {}) {
   logMsg('Compiling SCSS...')
 

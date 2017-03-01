@@ -20,7 +20,9 @@
     margin: 20px 0;
     font-size: 1.5rem;
   }
-  &__social {}
+  &__social > a {
+    @include btn;
+  }
 }
 
 @media screen and (min-height: 850px) {
