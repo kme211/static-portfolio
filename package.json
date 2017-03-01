@@ -4,8 +4,8 @@
   "description": "Personal static portfolio",
   "main": "build.js",
   "scripts": {
-    "dev": "nodemon build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon build.js --env=dev",
+    "build": "nodemon build.js --env=production"
   },
   "author": "Keari Eggers <kungfu.keari@gmail.com>",
   "license": "MIT",

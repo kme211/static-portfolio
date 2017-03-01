@@ -1,13 +1,16 @@
+var argv = require('yargs').argv;
 const fs = require('fs')
 const nunjucks = require('nunjucks')
 let work = require('./src/work')
 const sass = require('node-sass')
 const chalk = require('chalk')
-const development = process.env.NODE_ENV !== 'production'
+const development = argv.env !== 'production'
 
 const logMsg = (msg) => console.log(chalk.blue(msg))
 const logSuccess = (msg) => console.log(chalk.green(msg))
 const logError = (error) => console.log(chalk.red(error))
+
+logMsg('Build process started. env=' + argv.env)
 
 function compileScss(successCallback = () => {}, errCallback = () => {}) {
   logMsg('Compiling SCSS...')
