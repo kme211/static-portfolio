@@ -5,9 +5,19 @@ module.exports = [{
     code: "https://github.com/kme211/bender-quotes",
     demo: "http://bender-quotes.netlify.com/"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1488144233/portfolio/bender-quotes.jpg",
+  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1488392940/portfolio/bender-quotes-cropped.jpg",
   desc: "Displays random Bender quotes and animates Bender's eyelids.",
   tags: ["ES2015", "SCSS", "CSS Images"]
+}, {
+  name: "Simon Game",
+  date: "2017-02-17",
+  links: {
+    code: "https://github.com/kme211/simon-game",
+    demo: "http://preacher-jessie-81250.netlify.com/"
+  },
+  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1488392316/portfolio/simon-game.jpg",
+  desc: "Digital version of the classic electronic memory game.",
+  tags: ["React", "ES2015"]
 }, {
   name: "Camper Leaderboard",
   date: "2016-06-03",
