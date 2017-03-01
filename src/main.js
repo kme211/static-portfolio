@@ -52,4 +52,24 @@
   const dates = document.querySelectorAll('.work-item__date');
 
   dates.forEach(date => date.textContent = getRelativeTimeAgo(date.textContent));
+
+  const projects = document.querySelectorAll('.work-item');
+
+  function checkProjects(e) {
+    projects.forEach(project => {
+      
+      const fadeUpAt = (window.scrollY + window.innerHeight) - project.offsetHeight / 2;
+      const projectBottom = project.offsetTop + project.offsetHeight;
+      const isHalfShown = fadeUpAt > project.offsetTop;
+      const isNotScrolledPast = window.scrollY < (projectBottom - (project.offsetHeight / 2));
+
+      if(isHalfShown && isNotScrolledPast) {
+        project.classList.add('active');
+      } else {
+        project.classList.remove('active');   
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkProjects);
 }());

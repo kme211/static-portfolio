@@ -3,6 +3,11 @@
   display: flex;
   flex-flow: row wrap;
   margin-bottom: 1rem;
+  opacity: 0.4;
+  transition: opacity 0.5s;
+  &.active {
+    opacity: 1;
+  }
   &__meta {
     order: 0;
     flex: 1 100%;
