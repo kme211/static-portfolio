@@ -20,7 +20,7 @@ module.exports = [{
   tags: ["React", "ES2015", "Promises"]
 }, {
   name: "Markdown Previewer",
-  date: new Date(2016, 5, 25),
+  date: "2016-06-25",
   links: {
     code: "http://codepen.io/kme211/pen/qNRKNL",
     demo: "http://codepen.io/kme211/full/qNRKNL"
@@ -30,7 +30,7 @@ module.exports = [{
   tags: ["React", "ES2015"]
 }, {
   name: "Tic Tac Toe",
-  date: new Date(2016, 3, 6),
+  date: "2016-04-06",
   links: {
     code: "http://codepen.io/kme211/pen/qZVYqP",
     demo: "http://codepen.io/kme211/full/qZVYqP"
@@ -40,7 +40,7 @@ module.exports = [{
   tags: ["OOP", "ES2015", "SCSS"]
 }, {
   name: "Shopping List",
-  date: new Date(2016, 1, 15),
+  date: "2016-02-15",
   links: {
     code: "http://codepen.io/kme211/pen/eJMLaL",
     demo: "http://codepen.io/kme211/full/eJMLaL"
@@ -50,7 +50,7 @@ module.exports = [{
   tags: ["ES2015", "SCSS", "jQuery", "Backbone.Events"]
 }, {
   name: "Wikipedia Viewer",
-  date: new Date(2016, 1, 10),
+  date: "2016-02-10",
   links: {
     code: "http://codepen.io/kme211/pen/NxERyL",
     demo: "http://codepen.io/kme211/full/NxERyL"
@@ -60,7 +60,7 @@ module.exports = [{
   tags: ["ES2015", "SCSS", "jQuery"]
 }, {
   name: "Free Code Camp Camper News",
-  date: new Date(2016, 0, 31),
+  date: "2016-01-31",
   links: {
     code: "http://codepen.io/kme211/pen/MKrqbB",
     demo: "http://codepen.io/kme211/full/MKrqbB/"
@@ -70,7 +70,7 @@ module.exports = [{
   tags: ["Handlebars", "Lazy image loading", "ES2015", "SCSS"]
 }, {
   name: "Calculator",
-  date: new Date(2015, 10, 8),
+  date: "2015-11-08",
   links: {
     code: "http://codepen.io/kme211/pen/Kdejvv/",
     demo: "http://codepen.io/kme211/full/Kdejvv/"
@@ -80,7 +80,7 @@ module.exports = [{
   tags: ["Vanilla Javascript"]
 }, {
   name: "Recipe Box",
-  date: new Date(2015, 10, 27),
+  date: "2015-11-27",
   links: {
     code: "http://codepen.io/kme211/pen/OyeGQO/",
     demo: "http://codepen.io/kme211/full/OyeGQO/"
@@ -90,7 +90,7 @@ module.exports = [{
   tags: ["Knockout", "jQuery"]
 }, {
   name: "Local weather app",
-  date: new Date(2015, 10, 8),
+  date: "2015-11-08",
   links: {
     code: "http://codepen.io/kme211/pen/vLmvJV",
     demo: "http://codepen.io/kme211/full/vLmvJV"
@@ -100,7 +100,7 @@ module.exports = [{
   tags: ["jQuery", "Responsive", "Open Weathermap API", "Geolocation"]
 }, {
   name: "Twitch.tv status app",
-  date: new Date(2015, 10, 29),
+  date: "2015-11-29",
   links: {
     code: "http://codepen.io/kme211/pen/ojKYOq/",
     demo: "http://codepen.io/kme211/full/ojKYOq/"
@@ -110,7 +110,7 @@ module.exports = [{
   tags: ["jQuery", "Handlebars", "Twitch.tv API", "ES2015"]
 }, {
   name: "Pomodoro Timer",
-  date: new Date(2015, 9, 17),
+  date: "2015-10-17",
   links: {
     code: "http://codepen.io/kme211/pen/NGwaLB/",
     demo: "http://codepen.io/kme211/full/NGwaLB/"
@@ -120,7 +120,7 @@ module.exports = [{
   tags: ["jQuery"]
 }, {
   name: "Random Quote Machine",
-  date: new Date(2015, 9, 11),
+  date: "2015-10-11",
   links: {
     code: "http://codepen.io/kme211/pen/gaxPzR/",
     demo: "http://codepen.io/kme211/full/gaxPzR/"
