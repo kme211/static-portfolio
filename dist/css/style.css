@@ -133,7 +133,7 @@ section {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   opacity: 0.4;
   transition: opacity 0.5s; }
   .work-item.active {
@@ -141,7 +141,7 @@ section {
   .work-item__meta {
     order: 0;
     flex: 1 100%;
-    margin: 0 1rem 2rem 1rem; }
+    margin: 0 1rem 0.5rem 1rem; }
     .work-item__meta > * {
       margin-bottom: 10px; }
   .work-item__name {
@@ -177,10 +177,13 @@ section {
       border: 1px solid #00ADB5; }
 
 @media screen and (min-width: 500px) {
-  .work-item__meta {
-    order: 1;
-    flex: 1; }
-  .work-item__thumb {
-    order: 0;
-    flex: 0 1 275px;
-    height: auto; } }
+  .work-item {
+    margin-bottom: 1rem; }
+    .work-item__meta {
+      order: 1;
+      flex: 1;
+      margin: 0 1rem 2rem 1rem; }
+    .work-item__thumb {
+      order: 0;
+      flex: 0 1 275px;
+      height: auto; } }

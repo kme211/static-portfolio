@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   opacity: 0.4;
   transition: opacity 0.5s;
   &.active {
@@ -11,7 +11,7 @@
   &__meta {
     order: 0;
     flex: 1 100%;
-    margin: 0 1rem 2rem 1rem;
+    margin: 0 1rem 0.5rem 1rem;
     &>* {
       margin-bottom: 10px;
     }
@@ -46,9 +46,11 @@
 
 @media screen and (min-width: 500px) {
   .work-item {
+    margin-bottom: 1rem;
     &__meta {
       order: 1;
       flex: 1;
+      margin: 0 1rem 2rem 1rem;
     }
     &__thumb {
       order: 0;
