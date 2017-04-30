@@ -69,16 +69,6 @@ module.exports = [{
   desc: "Search for Wikipedia articles",
   tags: ["ES2015", "SCSS", "jQuery"]
 }, {
-  name: "Free Code Camp Camper News",
-  date: "2016-01-31",
-  links: {
-    code: "http://codepen.io/kme211/pen/MKrqbB",
-    demo: "http://codepen.io/kme211/full/MKrqbB/"
-  },
-  imgUrl: "https://spaceholder.cc/300x185",
-  desc: "Stylizes Free Code Camp news stories",
-  tags: ["Handlebars", "Lazy image loading", "ES2015", "SCSS"]
-}, {
   name: "Calculator",
   date: "2015-11-08",
   links: {
@@ -118,24 +108,4 @@ module.exports = [{
   imgUrl: "https://spaceholder.cc/300x185",
   desc: "Consumes data from the Twitch.tv API to see status of list of users.",
   tags: ["jQuery", "Handlebars", "Twitch.tv API", "ES2015"]
-}, {
-  name: "Pomodoro Timer",
-  date: "2015-10-17",
-  links: {
-    code: "http://codepen.io/kme211/pen/NGwaLB/",
-    demo: "http://codepen.io/kme211/full/NGwaLB/"
-  },
-  imgUrl: "https://spaceholder.cc/300x185",
-  desc: "Just a regular productivity timer",
-  tags: ["jQuery"]
-}, {
-  name: "Random Quote Machine",
-  date: "2015-10-11",
-  links: {
-    code: "http://codepen.io/kme211/pen/gaxPzR/",
-    demo: "http://codepen.io/kme211/full/gaxPzR/"
-  },
-  imgUrl: "https://spaceholder.cc/300x185",
-  desc: "Just spits out random quotes.",
-  tags: ["Bootstrap", "jQuery"]
 }]
