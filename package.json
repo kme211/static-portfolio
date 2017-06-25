@@ -5,7 +5,7 @@
   "main": "build.js",
   "scripts": {
     "start": "nodemon build.js --env=dev",
-    "build": "nodemon build.js --env=production"
+    "build": "node build.js --env=production"
   },
   "author": "Keari Eggers <kungfu.keari@gmail.com>",
   "license": "MIT",
