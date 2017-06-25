@@ -12,10 +12,18 @@ const logError = (error) => console.log(chalk.red(error))
 
 logMsg('Build process started. env=' + argv.env)
 
-work = work.map(project => {
-    let codeIcon = project.links.code.match('codepen') ? 'icon-codepen' : 'icon-github'
-    return Object.assign({}, project, { codeIcon })
-})
+work = work
+  .sort((a, b) => {
+    const aDate = new Date(a.date);
+    const bDate = new Date(b.date);
+    if(aDate < bDate) return 1;
+    if(aDate > bDate) return -1;
+    return 0;
+  })
+  .map(project => {
+      let codeIcon = project.links.code.match('codepen') ? 'icon-codepen' : 'icon-github'
+      return Object.assign({}, project, { codeIcon })
+  })
 
 function compileScss(successCallback = () => {}, errCallback = () => {}) {
   logMsg('Compiling SCSS...')
