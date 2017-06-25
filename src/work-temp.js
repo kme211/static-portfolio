@@ -1,3 +1,6 @@
+// backup of work
+// some of these need to be fixed
+
 module.exports = [{
   name: "fodmapr",
   date: "2017-01-16",
@@ -29,6 +32,26 @@ module.exports = [{
   desc: "Digital version of the classic electronic memory game.",
   tags: ["React", "ES2015"]
 }, {
+  name: "Camper Leaderboard",
+  date: "2016-06-03",
+  links: {
+    code: "http://codepen.io/kme211/pen/jAmVVq",
+    demo: "http://codepen.io/kme211/full/jAmVVq"
+  },
+  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1474743468/portfolio/leaderboard.jpg",
+  desc: "Displays the top 100 campers of Free Code Camp.",
+  tags: ["React", "ES2015", "Promises"]
+}, {
+  name: "Markdown Previewer",
+  date: "2016-06-25",
+  links: {
+    code: "http://codepen.io/kme211/pen/qNRKNL",
+    demo: "http://codepen.io/kme211/full/qNRKNL"
+  },
+  imgUrl: "https://spaceholder.cc/300x185",
+  desc: "Simple GitHub flavored markdown previewer",
+  tags: ["React", "ES2015"]
+}, {
   name: "Tic Tac Toe",
   date: "2016-04-06",
   links: {
@@ -45,7 +68,7 @@ module.exports = [{
     code: "http://codepen.io/kme211/pen/eJMLaL",
     demo: "http://codepen.io/kme211/full/eJMLaL"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1474743874/portfolio/shoppingList.jpg",
+  imgUrl: "https://spaceholder.cc/300x185",
   desc: "Simple shopping list app",
   tags: ["ES2015", "SCSS", "jQuery", "Backbone.Events"]
 }, {
@@ -65,7 +88,7 @@ module.exports = [{
     code: "http://codepen.io/kme211/pen/Kdejvv/",
     demo: "http://codepen.io/kme211/full/Kdejvv/"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1474743874/portfolio/calculator.jpg",
+  imgUrl: "https://spaceholder.cc/300x185",
   desc: "Very basic calculator.",
   tags: ["Vanilla Javascript"]
 }, {
@@ -78,4 +101,24 @@ module.exports = [{
   imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1474743874/portfolio/recipeBox.jpg",
   desc: "Uses local storage to save your recipes.",
   tags: ["Knockout", "jQuery"]
+}, {
+  name: "Local weather app",
+  date: "2015-11-08",
+  links: {
+    code: "http://codepen.io/kme211/pen/vLmvJV",
+    demo: "http://codepen.io/kme211/full/vLmvJV"
+  },
+  imgUrl: "https://spaceholder.cc/300x185",
+  desc: "Uses geolocation to show current weather",
+  tags: ["jQuery", "Responsive", "Open Weathermap API", "Geolocation"]
+}, {
+  name: "Twitch.tv status app",
+  date: "2015-11-29",
+  links: {
+    code: "http://codepen.io/kme211/pen/ojKYOq/",
+    demo: "http://codepen.io/kme211/full/ojKYOq/"
+  },
+  imgUrl: "https://spaceholder.cc/300x185",
+  desc: "Consumes data from the Twitch.tv API to see status of list of users.",
+  tags: ["jQuery", "Handlebars", "Twitch.tv API", "ES2015"]
 }]
