@@ -2,7 +2,7 @@
   &__content {
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
     &>* {
       margin: 1rem;
     }
