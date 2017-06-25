@@ -6,7 +6,7 @@ module.exports = [{
     demo: "https://fodmapr.net/"
   },
   imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1498399970/portfolio/fodmapr.png",
-  desc: "Allows users to quickly check if a food is low/high on the FODMAP spectrum",
+  desc: "Allows users to quickly check if a food is low/high on the FODMAP spectrum.",
   tags: ["Service workers", "Offline capability"]
 },{
   name: "Bender Quotes",
