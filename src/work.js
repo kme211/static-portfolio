@@ -1,4 +1,14 @@
 module.exports = [{
+  name: "fodmapr",
+  date: "2017-01-16",
+  links: {
+    code: "https://github.com/kme211/fodmapr",
+    demo: "https://fodmapr.net/"
+  },
+  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1498399970/portfolio/fodmapr.png",
+  desc: "Allows users to quickly check if a food is low/high on the FODMAP spectrum",
+  tags: ["Service workers", "Offline capability"]
+},{
   name: "Bender Quotes",
   date: "2017-02-26",
   links: {
