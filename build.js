@@ -27,11 +27,10 @@ tagCloud = Object.keys(tagCloud).map(key => {
 }).sort((a, b) => {
   if(a.instances < b.instances) return 1;
   if(a.instances > b.instances) return -1;
-  if(a.tag > b.tag) return 1;
-  if(a.tag < b.tag) return -1;
+  if(a.name > b.name) return 1;
+  if(a.name < b.name) return -1;
   return 0;
 })
-console.log(tagCloud)
 
 logMsg('Build process started. env=' + argv.env)
 
@@ -47,7 +46,6 @@ work = work
       let codeIcon = project.links.code.match('codepen') ? 'icon-codepen' : 'icon-github'
       let imgUrl = baseImgUrl + project.imgUrl
       let classes = project.tags.map(tag => kebabCase(tag))
-      console.log(classes)
       return Object.assign({}, project, { codeIcon, imgUrl, classes })
   })
 
