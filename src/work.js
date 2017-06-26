@@ -1,11 +1,21 @@
 module.exports = [{
+  name: "Game of Life",
+  date: "2017-05-22",
+  links: {
+    code: "https://codepen.io/kme211/pen/wdxEad",
+    demo: "https://codepen.io/kme211/full/wdxEad/"
+  },
+  imgUrl: "/v1498493431/portfolio/gameOfLife.png",
+  desc: "Cellular automaton based off of Conway's Game of Life.",
+  tags: ["React", "ES2015"]
+}, {
   name: "fodmapr",
   date: "2017-01-16",
   links: {
     code: "https://github.com/kme211/fodmapr",
     demo: "https://fodmapr.net/"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1498399970/portfolio/fodmapr.png",
+  imgUrl: "/v1498399970/portfolio/fodmapr.png",
   desc: "Allows users to quickly check if a food is low/high on the FODMAP spectrum.",
   tags: ["Service workers", "Offline capability"] 
 },{
@@ -15,7 +25,7 @@ module.exports = [{
     code: "https://github.com/kme211/bender-quotes",
     demo: "http://bender-quotes.netlify.com/"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1488392940/portfolio/bender-quotes-cropped.jpg",
+  imgUrl: "/v1488392940/portfolio/bender-quotes-cropped.jpg",
   desc: "Displays random Bender quotes and animates Bender's eyelids.",
   tags: ["ES2015", "SCSS", "CSS Images"]
 }, {
@@ -25,7 +35,7 @@ module.exports = [{
     code: "https://github.com/kme211/simon-game",
     demo: "http://preacher-jessie-81250.netlify.com/"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1488392316/portfolio/simon-game.jpg",
+  imgUrl: "/v1488392316/portfolio/simon-game.jpg",
   desc: "Digital version of the classic electronic memory game.",
   tags: ["React", "ES2015"]
 }, {
@@ -35,7 +45,7 @@ module.exports = [{
     code: "http://codepen.io/kme211/pen/qZVYqP",
     demo: "http://codepen.io/kme211/full/qZVYqP"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1474743468/portfolio/ticTacToe.jpg",
+  imgUrl: "/v1474743468/portfolio/ticTacToe.jpg",
   desc: "Play Tic Tac Toe against the computer",
   tags: ["OOP", "ES2015", "SCSS"]
 }, {
@@ -45,7 +55,7 @@ module.exports = [{
     code: "http://codepen.io/kme211/pen/eJMLaL",
     demo: "http://codepen.io/kme211/full/eJMLaL"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1474743874/portfolio/shoppingList.jpg",
+  imgUrl: "/v1474743874/portfolio/shoppingList.jpg",
   desc: "Simple shopping list app",
   tags: ["ES2015", "SCSS", "jQuery", "Backbone.Events"]
 }, {
@@ -55,7 +65,7 @@ module.exports = [{
     code: "http://codepen.io/kme211/pen/NxERyL",
     demo: "http://codepen.io/kme211/full/NxERyL"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1474744155/portfolio/wikipediaSearcher.jpg",
+  imgUrl: "/v1474744155/portfolio/wikipediaSearcher.jpg",
   desc: "Search for Wikipedia articles",
   tags: ["ES2015", "SCSS", "jQuery"]
 }, {
@@ -65,7 +75,7 @@ module.exports = [{
     code: "http://codepen.io/kme211/pen/Kdejvv/",
     demo: "http://codepen.io/kme211/full/Kdejvv/"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1474743874/portfolio/calculator.jpg",
+  imgUrl: "/v1474743874/portfolio/calculator.jpg",
   desc: "Very basic calculator.",
   tags: ["Vanilla Javascript"]
 }, {
@@ -75,7 +85,7 @@ module.exports = [{
     code: "http://codepen.io/kme211/pen/OyeGQO/",
     demo: "http://codepen.io/kme211/full/OyeGQO/"
   },
-  imgUrl: "http://res.cloudinary.com/ddy54k4ks/image/upload/v1474743874/portfolio/recipeBox.jpg",
+  imgUrl: "/v1474743874/portfolio/recipeBox.jpg",
   desc: "Uses local storage to save your recipes.",
   tags: ["Knockout", "jQuery"]
 }]

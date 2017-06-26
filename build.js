@@ -10,6 +10,8 @@ const logMsg = (msg) => console.log(chalk.blue(msg))
 const logSuccess = (msg) => console.log(chalk.green(msg))
 const logError = (error) => console.log(chalk.red(error))
 
+const baseImgUrl = 'http://res.cloudinary.com/ddy54k4ks/image/upload/f_auto,w_500,q_70'
+
 logMsg('Build process started. env=' + argv.env)
 
 work = work
@@ -22,7 +24,8 @@ work = work
   })
   .map(project => {
       let codeIcon = project.links.code.match('codepen') ? 'icon-codepen' : 'icon-github'
-      return Object.assign({}, project, { codeIcon })
+      let imgUrl = baseImgUrl + project.imgUrl
+      return Object.assign({}, project, { codeIcon, imgUrl })
   })
 
 function compileScss(successCallback = () => {}, errCallback = () => {}) {
