@@ -126,7 +126,7 @@ if (development) {
   logMsg('Building index.html...')
 
   nunjucks.configure('src/views')
-  const rendered = nunjucks.render('index.html', { work: work })
+  const rendered = nunjucks.render('index.html', { work, tagCloud })
   fs.writeFile('./dist/index.html', rendered, () => logSuccess('index.html written to dist/index.html'))
   if(!fs.existsSync('./dist/js')) fs.mkdirSync('./dist/js')
   fs.readFile('./src/main.js', (err, data) => {
