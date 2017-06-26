@@ -75,7 +75,7 @@
   checkProjects();
 
   const tagList = document.querySelector('.tags');
-  const tags = Array.from(tagList.children);
+  const tags = [].slice.call(tagList.children);
   const workItems = document.querySelectorAll('.work-item');
 
   function hasClass(el, className) {
