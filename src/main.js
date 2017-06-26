@@ -72,4 +72,60 @@
   }
 
   window.addEventListener('scroll', checkProjects);
+  checkProjects();
+
+  const tagList = document.querySelector('.tags');
+  const tags = Array.from(tagList.children);
+  const workItems = document.querySelectorAll('.work-item');
+
+  function hasClass(el, className) {
+    if (el.classList)
+      return el.classList.contains(className);
+    else
+      return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+  }
+
+  function addClass(el, className) {
+    if (el.classList)
+      el.classList.add(className);
+    else
+      el.className += ' ' + className;
+  }
+
+  function removeClass(el, className) {
+    if (el.classList)
+      el.classList.remove(className);
+    else
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  }
+
+  function findTagEl(elem) {
+    if(elem.dataset && elem.dataset.filter) return elem;
+    return findTagEl(elem.parentNode)
+  }
+
+  function updateCurrentTag(currentTag) {
+    tags.forEach(function(tag) {
+      if(tag === currentTag) addClass(tag, 'active');
+      else removeClass(tag, 'active');
+    });
+
+    const filter = currentTag.dataset.filter;
+
+    workItems.forEach(function(item) {
+      if(filter !== 'all' && !hasClass(item, filter)) {
+        addClass(item, 'hidden');
+      } else {
+        removeClass(item, 'hidden');
+      }
+    });
+
+    window.setTimeout(checkProjects, 500);
+  }
+
+  tagList.addEventListener('click', function(e) {
+    if(e.target.tagName.toLowerCase() === 'ul') return;
+    const currentTag = findTagEl(e.target);
+    updateCurrentTag(currentTag);
+  })
 }());

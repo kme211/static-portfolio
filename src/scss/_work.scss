@@ -4,12 +4,18 @@
   flex-flow: row wrap;
   border-top: 2px dashed $primary-color-dark;
   opacity: 0.4;
-  transition: opacity 0.5s;
+  transition: all 0.5s linear;
+  overflow: hidden;
+  max-height: 1000px;
   &:nth-child(even) {
     background-color: $light-gray;
   }
   &.active {
     opacity: 1;
+  }
+  &.hidden {
+    max-height: 0;
+    opacity: 0;
   }
   &__meta {
     order: 0;

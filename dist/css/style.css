@@ -135,11 +135,16 @@ section {
   flex-flow: row wrap;
   border-top: 2px dashed #222831;
   opacity: 0.4;
-  transition: opacity 0.5s; }
+  transition: all 0.5s linear;
+  overflow: hidden;
+  max-height: 1000px; }
   .work-item:nth-child(even) {
     background-color: #dbdbdb; }
   .work-item.active {
     opacity: 1; }
+  .work-item.hidden {
+    max-height: 0;
+    opacity: 0; }
   .work-item__meta {
     order: 0;
     flex: 1 100%;
@@ -187,3 +192,27 @@ section {
     order: 0;
     flex: 0 1 275px;
     height: auto; } }
+
+.tags {
+  margin-bottom: 1rem; }
+
+.tag {
+  cursor: pointer;
+  font-size: 0.8em;
+  opacity: 0.5;
+  margin: 4px 2px;
+  display: inline-block;
+  background-color: #222831;
+  transition: all 0.4s; }
+  .tag.active {
+    opacity: 1; }
+  .tag__name {
+    display: inline-block;
+    padding: 6px;
+    background-color: #222831;
+    color: #00ADB5; }
+  .tag__instances {
+    display: inline-block;
+    padding: 6px;
+    color: #222831;
+    background-color: #00ADB5; }

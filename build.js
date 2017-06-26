@@ -5,12 +5,33 @@ let work = require('./src/work')
 const sass = require('node-sass')
 const chalk = require('chalk')
 const development = argv.env !== 'production'
+const kebabCase = require('./tools/kebabCase');
 
 const logMsg = (msg) => console.log(chalk.blue(msg))
 const logSuccess = (msg) => console.log(chalk.green(msg))
 const logError = (error) => console.log(chalk.red(error))
 
 const baseImgUrl = 'http://res.cloudinary.com/ddy54k4ks/image/upload/f_auto,w_500,q_70'
+let tags = work.map(project => project.tags).reduce((a, b) => a.concat(b), [])
+let tagCloud = {};
+tags.forEach(tag => {
+  tagCloud[tag] ? tagCloud[tag]++ : tagCloud[tag] = 1;
+})
+
+tagCloud = Object.keys(tagCloud).map(key => {
+  return {
+    name: key,
+    kebabName: kebabCase(key),
+    instances: tagCloud[key]
+  }
+}).sort((a, b) => {
+  if(a.instances < b.instances) return 1;
+  if(a.instances > b.instances) return -1;
+  if(a.tag > b.tag) return 1;
+  if(a.tag < b.tag) return -1;
+  return 0;
+})
+console.log(tagCloud)
 
 logMsg('Build process started. env=' + argv.env)
 
@@ -25,7 +46,9 @@ work = work
   .map(project => {
       let codeIcon = project.links.code.match('codepen') ? 'icon-codepen' : 'icon-github'
       let imgUrl = baseImgUrl + project.imgUrl
-      return Object.assign({}, project, { codeIcon, imgUrl })
+      let classes = project.tags.map(tag => kebabCase(tag))
+      console.log(classes)
+      return Object.assign({}, project, { codeIcon, imgUrl, classes })
   })
 
 function compileScss(successCallback = () => {}, errCallback = () => {}) {
@@ -81,7 +104,7 @@ if (development) {
   })
 
   app.get('/', (req, res) => {
-    res.render('index.html', { work: work })
+    res.render('index.html', { work, tagCloud })
   })
 
   app.get('/css/style.css', (req, res) => {

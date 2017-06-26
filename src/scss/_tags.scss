@@ -1,0 +1,28 @@
+.tags {
+  margin-bottom: 1rem;
+}
+
+.tag {
+  cursor: pointer;
+  font-size: 0.8em;
+  opacity: 0.5;
+  margin: 4px 2px;
+  display: inline-block;
+  background-color: $primary-color-dark;
+  transition: all 0.4s;
+  &.active {
+    opacity: 1;
+  }
+  &__name {
+    display: inline-block;
+    padding: 6px;
+    background-color: $primary-color-dark;
+    color: $accent-color;
+  }
+  &__instances {
+    display: inline-block;
+    padding: 6px;
+    color: $primary-color-dark;
+    background-color: $accent-color;
+  }
+}
