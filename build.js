@@ -128,5 +128,9 @@ if (development) {
   nunjucks.configure('src/views')
   const rendered = nunjucks.render('index.html', { work: work })
   fs.writeFile('./dist/index.html', rendered, () => logSuccess('index.html written to dist/index.html'))
-
+  if(!fs.existsSync('./dist/js')) fs.mkdirSync('./dist/js')
+  fs.readFile('./src/main.js', (err, data) => {
+    if(err) logError(err)
+    fs.writeFile('./dist/js/main.js', data, () => logSuccess('main.js written to dist/js/main.js'))
+  })
 }
