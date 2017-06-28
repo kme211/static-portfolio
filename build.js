@@ -11,7 +11,7 @@ const logMsg = (msg) => console.log(chalk.blue(msg))
 const logSuccess = (msg) => console.log(chalk.green(msg))
 const logError = (error) => console.log(chalk.red(error))
 
-const baseImgUrl = 'http://res.cloudinary.com/ddy54k4ks/image/upload/f_auto,w_500,q_70'
+const baseImgUrl = '//res.cloudinary.com/ddy54k4ks/image/upload/f_auto,w_500,q_70'
 let tags = work.map(project => project.tags).reduce((a, b) => a.concat(b), [])
 let tagCloud = {};
 tags.forEach(tag => {
