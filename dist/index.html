@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta name="description" content="Web developer specializing in React/NodeJS.">
   <meta name="keywords" content="HTML,CSS,Javascript,React,NodeJS,webpack,Mocha">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#222831">
   <meta name="author" content="Keari Eggers">
   <title>Keari Eggers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,69 +94,71 @@
     <div class="work__content">
       <h1 class="work__title section-title">Work</h1>
 
-      <h2>Filters:</h2>
-      <ul class="tags">
-        <li class="tag active" data-filter="all">
-          <div class="tag__name">All</div> 
-          <div class="tag__instances">11</div>
-        </li>
-      
-        <li class="tag" data-filter="es2015">
-          <div class="tag__name">ES2015</div> 
-          <div class="tag__instances">6</div>
-        </li>
-      
-        <li class="tag" data-filter="scss">
-          <div class="tag__name">SCSS</div> 
-          <div class="tag__instances">4</div>
-        </li>
-      
-        <li class="tag" data-filter="jquery">
-          <div class="tag__name">jQuery</div> 
-          <div class="tag__instances">3</div>
-        </li>
-      
-        <li class="tag" data-filter="react">
-          <div class="tag__name">React</div> 
-          <div class="tag__instances">2</div>
-        </li>
-      
-        <li class="tag" data-filter="backbone-events">
-          <div class="tag__name">Backbone.Events</div> 
-          <div class="tag__instances">1</div>
-        </li>
-      
-        <li class="tag" data-filter="css-images">
-          <div class="tag__name">CSS Images</div> 
-          <div class="tag__instances">1</div>
-        </li>
-      
-        <li class="tag" data-filter="knockout">
-          <div class="tag__name">Knockout</div> 
-          <div class="tag__instances">1</div>
-        </li>
-      
-        <li class="tag" data-filter="oop">
-          <div class="tag__name">OOP</div> 
-          <div class="tag__instances">1</div>
-        </li>
-      
-        <li class="tag" data-filter="offline-capability">
-          <div class="tag__name">Offline capability</div> 
-          <div class="tag__instances">1</div>
-        </li>
-      
-        <li class="tag" data-filter="service-workers">
-          <div class="tag__name">Service workers</div> 
-          <div class="tag__instances">1</div>
-        </li>
-      
-        <li class="tag" data-filter="vanilla-javascript">
-          <div class="tag__name">Vanilla Javascript</div> 
-          <div class="tag__instances">1</div>
-        </li>
-      
-      </ul>
+      <div class="filters">
+        <h2>Filters:</h2>
+        <ul class="tags">
+          <li class="tag active" data-filter="all">
+            <div class="tag__name">All</div> 
+            <div class="tag__instances">11</div>
+          </li>
+        
+          <li class="tag" data-filter="es2015">
+            <div class="tag__name">ES2015</div> 
+            <div class="tag__instances">6</div>
+          </li>
+        
+          <li class="tag" data-filter="scss">
+            <div class="tag__name">SCSS</div> 
+            <div class="tag__instances">4</div>
+          </li>
+        
+          <li class="tag" data-filter="jquery">
+            <div class="tag__name">jQuery</div> 
+            <div class="tag__instances">3</div>
+          </li>
+        
+          <li class="tag" data-filter="react">
+            <div class="tag__name">React</div> 
+            <div class="tag__instances">2</div>
+          </li>
+        
+          <li class="tag" data-filter="backbone-events">
+            <div class="tag__name">Backbone.Events</div> 
+            <div class="tag__instances">1</div>
+          </li>
+        
+          <li class="tag" data-filter="css-images">
+            <div class="tag__name">CSS Images</div> 
+            <div class="tag__instances">1</div>
+          </li>
+        
+          <li class="tag" data-filter="knockout">
+            <div class="tag__name">Knockout</div> 
+            <div class="tag__instances">1</div>
+          </li>
+        
+          <li class="tag" data-filter="oop">
+            <div class="tag__name">OOP</div> 
+            <div class="tag__instances">1</div>
+          </li>
+        
+          <li class="tag" data-filter="offline-capability">
+            <div class="tag__name">Offline capability</div> 
+            <div class="tag__instances">1</div>
+          </li>
+        
+          <li class="tag" data-filter="service-workers">
+            <div class="tag__name">Service workers</div> 
+            <div class="tag__instances">1</div>
+          </li>
+        
+          <li class="tag" data-filter="vanilla-javascript">
+            <div class="tag__name">Vanilla Javascript</div> 
+            <div class="tag__instances">1</div>
+          </li>
+        
+        </ul>
+      </div>
 
       
       <div class="work-item react es2015">
@@ -371,6 +379,9 @@
 
     </div>
   </section>
+  <footer>
+    Website is generated using NodeJS, Nunjucks, and SCSS. The source is on <a href="https://github.com/kme211/static-portfolio" target="_blank">GitHub</a>.
+  </footer>
   <script src="/js/main.js"></script>
 </body>
 

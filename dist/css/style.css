@@ -122,7 +122,9 @@ section {
   .about__strengths ul {
     list-style-type: none; }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
+  .about__content > * {
+    margin: 0; }
   .about__desc {
     flex-basis: 450px; }
   .about__strengths {
@@ -193,6 +195,9 @@ section {
     flex: 0 1 275px;
     height: auto; } }
 
+.filters {
+  margin: 1rem; }
+
 .tags {
   margin-bottom: 1rem; }
 
@@ -216,3 +221,13 @@ section {
     padding: 6px;
     color: #222831;
     background-color: #00ADB5; }
+
+@media screen and (min-width: 700px) {
+  .filters {
+    margin: 0; } }
+
+footer {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  font-size: .75em; }
