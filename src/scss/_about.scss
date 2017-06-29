@@ -22,8 +22,11 @@
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   .about {
+    &__content > * {
+      margin: 0;
+    }
     &__desc {
       flex-basis: 450px;
     }

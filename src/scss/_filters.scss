@@ -1,3 +1,7 @@
+.filters {
+    margin: 1rem;
+  }
+
 .tags {
   margin-bottom: 1rem;
 }
@@ -24,5 +28,11 @@
     padding: 6px;
     color: $primary-color-dark;
     background-color: $accent-color;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .filters {
+    margin: 0;
   }
 }
