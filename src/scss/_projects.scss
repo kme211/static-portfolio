@@ -1,4 +1,4 @@
-.work-item {
+.project {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -54,7 +54,7 @@
 }
 
 @media screen and (min-width: 500px) {
-  .work-item {
+  .project {
     &__meta {
       order: 1;
       flex: 1;

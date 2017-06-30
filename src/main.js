@@ -1,5 +1,7 @@
 (function() {
   'use strict';
+  const DATE_CLASS = '.project__date';
+  const PROJECT_CLASS = '.project';
 
   // http://stackoverflow.com/questions/7641791/javascript-library-for-human-friendly-relative-date-formatting#answer-7641812
   function getRelativeTimeAgo(dateStr) {
@@ -49,11 +51,11 @@
     return fuzzy;
   }
 
-  const dates = document.querySelectorAll('.work-item__date');
+  const dates = document.querySelectorAll(DATE_CLASS);
 
   dates.forEach(date => date.textContent = getRelativeTimeAgo(date.textContent));
 
-  const projects = document.querySelectorAll('.work-item');
+  const projects = document.querySelectorAll(PROJECT_CLASS);
 
   function checkProjects(e) {
     projects.forEach(project => {
@@ -76,7 +78,6 @@
 
   const tagList = document.querySelector('.tags');
   const tags = [].slice.call(tagList.children);
-  const workItems = document.querySelectorAll('.work-item');
 
   function hasClass(el, className) {
     if (el.classList)
@@ -112,7 +113,7 @@
 
     const filter = currentTag.dataset.filter;
 
-    workItems.forEach(function(item) {
+    projects.forEach(function(item) {
       if(filter !== 'all' && !hasClass(item, filter)) {
         addClass(item, 'hidden');
       } else {

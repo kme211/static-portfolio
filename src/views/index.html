@@ -90,9 +90,9 @@
 
   </section>
 
-  <section class="work">
-    <div class="work__content">
-      <h1 class="work__title section-title">Work</h1>
+  <section class="projects">
+    <div class="projects__content">
+      <h1 class="projects__title section-title">Projects</h1>
 
       <div class="filters">
         <h2>Filters:</h2>
@@ -110,24 +110,24 @@
         </ul>
       </div>
 
-      {% for project in work %}
-      <div class="work-item {{project.classes.join(' ')}}">
-        <div class="work-item__meta">
-          <h1 class="work-item__name">{{ project.name }}</h1>
-          <p class="work-item__desc">
+      {% for project in projects %}
+      <div class="project {{project.classes.join(' ')}}">
+        <div class="project__meta">
+          <h1 class="projectm__name">{{ project.name }}</h1>
+          <p class="project__desc">
             {{ project.desc }}
           </p>
-          <p class="work-item__date">
+          <p class="project__date">
             {{ project.date }}
           </p>
-          <ul class="work-item__tech">
+          <ul class="project__tech">
             {% for tag in project.tags %}
-            <li class="work-item__tech-item">{{ tag }}</li>
+            <li class="project__tech-item">{{ tag }}</li>
             {% endfor %}
           </ul>
-          <a href="{{project.links.code}}" target="_blank" class="work-item__code-link"><svg class="icon {{project.codeIcon}}"><use xlink:href="#{{project.codeIcon}}"></use></svg> View code</a>
+          <a href="{{project.links.code}}" target="_blank" class="project__code-link"><svg class="icon {{project.codeIcon}}"><use xlink:href="#{{project.codeIcon}}"></use></svg> View code</a>
         </div>
-        <a class="work-item__thumb" href="{{project.links.demo}}" target="_blank" style="background: url({{project.imgUrl}}) no-repeat center center; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;">
+        <a class="project__thumb" href="{{project.links.demo}}" target="_blank" style="background: url({{project.imgUrl}}) no-repeat center center; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;">
           
         </a>
       </div>
