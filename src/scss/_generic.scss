@@ -24,10 +24,20 @@ a {
 section {
     max-width: $max-width;
     margin: 0 auto;
+    padding-top: $margin * 2;
+}
 
-    & > * {
-        margin: $margin 0;
-    }
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 40px;
+    text-transform: uppercase;
+}
+
+.inner {
+    max-width: $max-width;
+    margin: 0 auto;
 }
 
 @mixin btn($border: 'none') {
@@ -50,7 +60,7 @@ section {
         @if $border == 'none' {
             border: none;
         } @else {
-            borderPx: $border solid $accent-color;
+            border: $border solid $accent-color;
         }
     }
 }
@@ -83,12 +93,4 @@ section {
 
 .icon-github {
     width: 0.8571436107158661em;
-}
-
-.section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 10% 0 40px;
-    text-transform: uppercase;
 }

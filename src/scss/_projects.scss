@@ -47,7 +47,7 @@
     height: 200px;
   }
   &__code-link {
-    @include btn;
+    @include btn(1px);
     @include btn-small;
     @include btn-dark; 
   }

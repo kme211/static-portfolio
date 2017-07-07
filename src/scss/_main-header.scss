@@ -5,9 +5,7 @@
   padding: 0 1em;
   font-size: 14px;
   &__content {
-    margin: 0 auto;
     text-align: center;
-    max-width: $max-width;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,25 +27,6 @@
     & > a {
       @include btn(1px);
     }
-  }
-  &.sticky {
-    height: 60px;
-  }
-
-  &.sticky &__name {
-    font-size: 2em;
-  }
-  &.sticky .main-header__social > a {
-    @include btn;
-  }
-  & .sticky-show {
-    display: none;
-  }
-  &.sticky .sticky-show {
-    display: initial;
-  }
-  &.sticky .sticky-hide {
-    display: none;
   }
 }
 

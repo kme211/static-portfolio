@@ -57,16 +57,27 @@
     </nav>
   </div>
 
-  <div class="main-header sticky">
+  <div class="main-header">
     <div class="main-header__content">
-      <h1 class="main-header__name"><span class="sticky-hide">Hi, I'm</span> Keari<span class="sticky-show"> Eggers</span><span class="sticky-hide">.</span></h1>
-      <p class="main-header__desc sticky-hide">
+      <h1 class="main-header__name">Hi, I'm Keari.</h1>
+      <p class="main-header__desc">
         I'm a self-taught web developer based in Fort Worth, TX.
       </p>
       <div class="main-header__social">
         <a href="https://twitter.com/kearieggers" target="_blank"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg> <span class="sticky-hide">Twitter</span></a>
         <a href="https://github.com/kme211" target="_blank"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg> <span class="sticky-hide">GitHub</span></a>
         <a href="https://www.linkedin.com/in/keari" target="_blank"><svg class="icon icon-linkedin-square"><use xlink:href="#icon-linkedin-square"></use></svg> <span class="sticky-hide">LinkedIn</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky-header">
+    <div class="sticky-header__content">
+      <h1 class="sticky-header__name">Keari Eggers</h1>
+      <div class="sticky-header__social">
+        <a href="https://twitter.com/kearieggers" target="_blank"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+        <a href="https://github.com/kme211" target="_blank"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg></a>
+        <a href="https://www.linkedin.com/in/keari" target="_blank"><svg class="icon icon-linkedin-square"><use xlink:href="#icon-linkedin-square"></use></svg></a>
       </div>
     </div>
   </div>
@@ -104,7 +115,7 @@
   </section>
 
   <section class="projects" id="projects">
-    <div class="projects__content">
+    <div class="projects__content inner">
       <h1 class="projects__title section-title">Projects</h1>
 
       <div class="filters">
@@ -149,7 +160,9 @@
     </div>
   </section>
   <footer>
+    <div class="inner">
     Website is generated using NodeJS, Nunjucks, and SCSS. The source is on <a href="https://github.com/kme211/static-portfolio" target="_blank">GitHub</a>.
+    </div>
   </footer>
   <script src="/js/main.js"></script>
 </body>

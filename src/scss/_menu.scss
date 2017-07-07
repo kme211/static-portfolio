@@ -1,5 +1,19 @@
 .menu {
   position: relative;
+  z-index: 3;
+  height: 100%;
+  &.sticky .menu-toggle {
+    position: fixed;
+    transform: scale(0.75);
+    top: 6px;
+    left: 15px;
+  }
+  &.sticky {
+    margin-top: 50px;
+  }
+  &.sticky nav ul {
+    padding: 2em;
+  }
 }
 
 .menu-toggle {
@@ -9,10 +23,8 @@
   top: 20px;
   left: 25px;
   cursor: pointer;
-
-  &.sticky {
-    position: fixed;
-  }
+  transition: all 0.25s;
+  z-index: 3;
 
   &.on {
     .one {
@@ -50,25 +62,21 @@
 }
 
 nav ul {
-  margin: 5em 2em 0 2em;
-  padding: 0;
+  margin: 0;
+  padding: 5em 2em 0 2em;
   height: 100%;
   list-style: none;
+  transition: all 0.4s;
+  transform: translateX(0);
+  position: fixed;
+  background-color: $primary-color-dark;
 
   &.hidden {
-    display: none;
+    transform: translateX(-100%);
   }
   
   a {
     font-size: 1.25em;
     line-height: 2;
   }
-}
-
-.menu.on {
-  z-index: 10;
-  height: 100%;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
 }

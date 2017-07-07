@@ -69,7 +69,7 @@
 
   const projects = [].slice.call(document.querySelectorAll(PROJECT_CLASS));
 
-  function checkProjects(e) {
+  function checkProjects() {
     projects.forEach(project => {
       
       const fadeUpAt = (window.scrollY + window.innerHeight) - project.offsetHeight / 2;
@@ -85,8 +85,32 @@
     });
   }
 
-  window.addEventListener('scroll', checkProjects);
+  const menu = document.querySelector('.menu');
+  const mainHeader = document.querySelector('.main-header');
+  const stickyHeader = document.querySelector('.sticky-header');
+  const stickyHeaderHeight = stickyHeader.offsetHeight;
+  const mainHeaderHeight = mainHeader.offsetHeight;
+
+  function checkMenu() {
+    const showStickyHeader = mainHeaderHeight - stickyHeaderHeight;
+    const headerShouldBeSticky = window.scrollY >= showStickyHeader;
+    if(headerShouldBeSticky) {
+      addClass(stickyHeader, 'show');
+      addClass(menu, 'sticky');
+    } else {
+      removeClass(stickyHeader, 'show');
+      removeClass(menu, 'sticky');
+    }
+  }
+
+  function scrollHandler(e) {
+    checkProjects();
+    checkMenu();
+  }
+
+  window.addEventListener('scroll', scrollHandler);
   checkProjects();
+  checkMenu();
 
   const tagList = document.querySelector('.tags');
   const tags = [].slice.call(tagList.children);
