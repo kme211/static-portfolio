@@ -51,11 +51,11 @@
     return fuzzy;
   }
 
-  const dates = document.querySelectorAll(DATE_CLASS);
-
+  const dates = [].slice.call(document.querySelectorAll(DATE_CLASS));
+  
   dates.forEach(date => date.textContent = getRelativeTimeAgo(date.textContent));
 
-  const projects = document.querySelectorAll(PROJECT_CLASS);
+  const projects = [].slice.call(document.querySelectorAll(PROJECT_CLASS));
 
   function checkProjects(e) {
     projects.forEach(project => {

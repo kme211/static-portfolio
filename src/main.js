@@ -3,6 +3,18 @@
   const DATE_CLASS = '.project__date';
   const PROJECT_CLASS = '.project';
 
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav ul');
+
+  function toggleMenu() {
+    toggleClass(menuToggle, 'on');
+    toggleClass(menuToggle.parentElement, 'on');
+    toggleClass(nav, 'hidden');
+  }
+
+  menuToggle.addEventListener('click', toggleMenu);
+  nav.addEventListener('click', toggleMenu);
+
   // http://stackoverflow.com/questions/7641791/javascript-library-for-human-friendly-relative-date-formatting#answer-7641812
   function getRelativeTimeAgo(dateStr) {
     const dateArr = dateStr.split('-');
@@ -98,6 +110,22 @@
       el.classList.remove(className);
     else
       el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  }
+
+  function toggleClass(el, className) {
+    if (el.classList) {
+      el.classList.toggle(className);
+    } else {
+      var classes = el.className.split(' ');
+      var existingIndex = classes.indexOf(className);
+
+      if (existingIndex >= 0)
+        classes.splice(existingIndex, 1);
+      else
+        classes.push(className);
+
+      el.className = classes.join(' ');
+    }
   }
 
   function findTagEl(elem) {

@@ -42,23 +42,36 @@
       </defs>
     </svg>
 
-  <div class="main-header">
-    <header class="main-header__content">
-      <h1 class="main-header__name">Keari Eggers</h1>
-      <h2 class="main-header__desc">
-        Junior front-end web developer.
-        <br>
-        Javascript enthusiast.
-      </h2>
-      <div class="main-header__social">
-        <a href="https://twitter.com/kearieggers" target="_blank"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg> Twitter</a>
-        <a href="https://github.com/kme211" target="_blank"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg> GitHub</a>
-        <a href="https://www.linkedin.com/in/keari" target="_blank"><svg class="icon icon-linkedin-square"><use xlink:href="#icon-linkedin-square"></use></svg> LinkedIn</a>
-      </div>
-    </header>
+  <div class="menu">
+    <div class="menu-toggle">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </div>
+    <nav>
+      <ul role="navigation" class="hidden">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        {#<li><a href="#">Contact</a></li>#}
+      </ul>
+    </nav>
   </div>
 
-  <section class="about">
+  <div class="main-header sticky">
+    <div class="main-header__content">
+      <h1 class="main-header__name"><span class="sticky-hide">Hi, I'm</span> Keari<span class="sticky-show"> Eggers</span><span class="sticky-hide">.</span></h1>
+      <p class="main-header__desc sticky-hide">
+        I'm a self-taught web developer based in Fort Worth, TX.
+      </p>
+      <div class="main-header__social">
+        <a href="https://twitter.com/kearieggers" target="_blank"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg> <span class="sticky-hide">Twitter</span></a>
+        <a href="https://github.com/kme211" target="_blank"><svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg> <span class="sticky-hide">GitHub</span></a>
+        <a href="https://www.linkedin.com/in/keari" target="_blank"><svg class="icon icon-linkedin-square"><use xlink:href="#icon-linkedin-square"></use></svg> <span class="sticky-hide">LinkedIn</span></a>
+      </div>
+    </div>
+  </div>
+
+  <section class="about" id="about">
     <h1 class="about__title section-title">About</h1>
     <div class="about__content">
       <div class="about__desc">
@@ -90,7 +103,7 @@
 
   </section>
 
-  <section class="projects">
+  <section class="projects" id="projects">
     <div class="projects__content">
       <h1 class="projects__title section-title">Projects</h1>
 

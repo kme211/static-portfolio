@@ -30,18 +30,28 @@ section {
     }
 }
 
-@mixin btn {
+@mixin btn($border: 'none') {
     display: inline-block;
     line-height: 1rem;
     vertical-align: middle;
-    border: 1px solid $white;
+    @if $border == 'none' {
+        border: none;
+    } @else {
+        border: $border solid $white;
+    }
+    
     color: $white;
     padding: 0.75em 1.25em;
     text-decoration: none;
 
     &:hover {
         color: $accent-color;
-        border: 1px solid $accent-color;
+        
+        @if $border == 'none' {
+            border: none;
+        } @else {
+            borderPx: $border solid $accent-color;
+        }
     }
 }
 

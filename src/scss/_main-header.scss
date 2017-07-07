@@ -16,6 +16,9 @@
   }
   &__name {
     font-size: 3em;
+    &--lastName {
+      display: none;
+    }
   }
   &__desc {
     margin: 1em 0;
@@ -24,8 +27,27 @@
   &__social {
     font-size: 0.84em;
     & > a {
-      @include btn;
+      @include btn(1px);
     }
+  }
+  &.sticky {
+    height: 60px;
+  }
+
+  &.sticky &__name {
+    font-size: 2em;
+  }
+  &.sticky .main-header__social > a {
+    @include btn;
+  }
+  & .sticky-show {
+    display: none;
+  }
+  &.sticky .sticky-show {
+    display: initial;
+  }
+  &.sticky .sticky-hide {
+    display: none;
   }
 }
 
