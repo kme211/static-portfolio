@@ -41,7 +41,9 @@ section {
   font-weight: bold;
   text-align: center;
   margin: 0 0 40px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  display: inline-block;
+  border-bottom: 3px solid #00ADB5; }
 
 .inner {
   max-width: 700px;

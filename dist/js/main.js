@@ -3,6 +3,18 @@
   const DATE_CLASS = '.project__date';
   const PROJECT_CLASS = '.project';
 
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav ul');
+
+  function toggleMenu() {
+    toggleClass(menuToggle, 'on');
+    toggleClass(menuToggle.parentElement, 'on');
+    toggleClass(nav, 'hidden');
+  }
+
+  menuToggle.addEventListener('click', toggleMenu);
+  nav.addEventListener('click', toggleMenu);
+
   // http://stackoverflow.com/questions/7641791/javascript-library-for-human-friendly-relative-date-formatting#answer-7641812
   function getRelativeTimeAgo(dateStr) {
     const dateArr = dateStr.split('-');
@@ -57,7 +69,7 @@
 
   const projects = [].slice.call(document.querySelectorAll(PROJECT_CLASS));
 
-  function checkProjects(e) {
+  function checkProjects() {
     projects.forEach(project => {
       
       const fadeUpAt = (window.scrollY + window.innerHeight) - project.offsetHeight / 2;
@@ -73,8 +85,32 @@
     });
   }
 
-  window.addEventListener('scroll', checkProjects);
+  const menu = document.querySelector('.menu');
+  const mainHeader = document.querySelector('.main-header');
+  const stickyHeader = document.querySelector('.sticky-header');
+  const stickyHeaderHeight = stickyHeader.offsetHeight;
+  const mainHeaderHeight = mainHeader.offsetHeight;
+
+  function checkMenu() {
+    const showStickyHeader = mainHeaderHeight - stickyHeaderHeight;
+    const headerShouldBeSticky = window.scrollY >= showStickyHeader;
+    if(headerShouldBeSticky) {
+      addClass(stickyHeader, 'show');
+      addClass(menu, 'sticky');
+    } else {
+      removeClass(stickyHeader, 'show');
+      removeClass(menu, 'sticky');
+    }
+  }
+
+  function scrollHandler(e) {
+    checkProjects();
+    checkMenu();
+  }
+
+  window.addEventListener('scroll', scrollHandler);
   checkProjects();
+  checkMenu();
 
   const tagList = document.querySelector('.tags');
   const tags = [].slice.call(tagList.children);
@@ -98,6 +134,22 @@
       el.classList.remove(className);
     else
       el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  }
+
+  function toggleClass(el, className) {
+    if (el.classList) {
+      el.classList.toggle(className);
+    } else {
+      var classes = el.className.split(' ');
+      var existingIndex = classes.indexOf(className);
+
+      if (existingIndex >= 0)
+        classes.splice(existingIndex, 1);
+      else
+        classes.push(className);
+
+      el.className = classes.join(' ');
+    }
   }
 
   function findTagEl(elem) {
