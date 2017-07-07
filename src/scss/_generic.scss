@@ -24,24 +24,44 @@ a {
 section {
     max-width: $max-width;
     margin: 0 auto;
-
-    & > * {
-        margin: $margin 0;
-    }
+    padding-top: $margin * 2;
 }
 
-@mixin btn {
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 40px;
+    text-transform: uppercase;
+}
+
+.inner {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+@mixin btn($border: 'none') {
     display: inline-block;
     line-height: 1rem;
     vertical-align: middle;
-    border: 1px solid $white;
+    @if $border == 'none' {
+        border: none;
+    } @else {
+        border: $border solid $white;
+    }
+    
     color: $white;
     padding: 0.75em 1.25em;
     text-decoration: none;
 
     &:hover {
         color: $accent-color;
-        border: 1px solid $accent-color;
+        
+        @if $border == 'none' {
+            border: none;
+        } @else {
+            border: $border solid $accent-color;
+        }
     }
 }
 
@@ -73,12 +93,4 @@ section {
 
 .icon-github {
     width: 0.8571436107158661em;
-}
-
-.section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 10% 0 40px;
-    text-transform: uppercase;
 }
