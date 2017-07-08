@@ -27,14 +27,21 @@ section {
     padding-top: $margin * 2;
 }
 
+
 .section-title {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    margin: 0 0 40px;
+    margin: 0 1rem 40px 1rem;
     text-transform: uppercase;
     display: inline-block;
     border-bottom: 3px solid $accent-color;
+}
+
+@media (min-width: 700px) {
+    .section-title { 
+        margin: 0 0 40px 0;
+    }
 }
 
 .inner {
