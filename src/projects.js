@@ -77,7 +77,7 @@ module.exports = [{
   },
   imgUrl: "/v1474744155/portfolio/wikipediaSearcher.jpg",
   desc: "Search for Wikipedia articles",
-  tags: ["ES2015", "SCSS", "jQuery"]
+  tags: ["ES2015", "SCSS", "jQuery", "Third-Party API"]
 }, {
   name: "Calculator",
   date: "2015-11-08",

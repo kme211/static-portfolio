@@ -145,7 +145,7 @@
             {{ project.date }}
           </p>
           <ul class="project__tech">
-            {% for tag in project.tags %}
+            {% for tag in project.tags|sort %}
             <li class="project__tech-item">{{ tag }}</li>
             {% endfor %}
           </ul>
