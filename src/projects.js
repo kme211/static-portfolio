@@ -1,4 +1,14 @@
 module.exports = [{
+  name: "Weather app",
+  date: "2017-07-10",
+  links: {
+    code: "https://github.com/kme211/weather-app",
+    demo: "https://kearieggers.com/weather/"
+  },
+  imgUrl: "/v1499719784/portfolio/weatherNow.png",
+  desc: "Mobile-first web app for checking the weather.",
+  tags: ["React", "ES2015", "Third-Party API", "Geolocation", "Google Maps", "Canvas"]
+}, {
   name: "Game of Life",
   date: "2017-05-22",
   links: {
@@ -82,10 +92,10 @@ module.exports = [{
   name: "Recipe Box",
   date: "2015-11-27",
   links: {
-    code: "http://codepen.io/kme211/pen/OyeGQO/",
-    demo: "http://codepen.io/kme211/full/OyeGQO/"
+    code: "https://codepen.io/kme211/pen/GqXoEE",
+    demo: "https://codepen.io/kme211/full/GqXoEE"
   },
-  imgUrl: "/v1474743874/portfolio/recipeBox.jpg",
+  imgUrl: "/v1499720388/portfolio/recipeBox-v2.png",
   desc: "Uses local storage to save your recipes.",
-  tags: ["Knockout", "jQuery"]
+  tags: ["React", "React Router", "SCSS"]
 }]
