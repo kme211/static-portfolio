@@ -12,7 +12,7 @@ const logSuccess = msg => console.log(chalk.green(msg));
 const logError = error => console.log(chalk.red(error));
 
 const baseImgUrl =
-  "//res.cloudinary.com/ddy54k4ks/image/upload/f_auto,w_500,q_70";
+  "//res.cloudinary.com/ddy54k4ks/image/upload/w_500/f_auto,q_70";
 let tags = projects
   .map(project => project.tags)
   .reduce((a, b) => a.concat(b), []);
