@@ -10,6 +10,7 @@
   z-index: 2;
   transition: all 0.4s;
   transform: translateY(-100%);
+  font-size: 16px;
   &.show {
     display: block;
     transform: translateY(0);
