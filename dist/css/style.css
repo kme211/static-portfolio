@@ -370,6 +370,7 @@ footer {
   .giffer-viewer__body {
     max-width: 700px;
     width: calc(100% - 2rem);
+    background-color: white;
     margin: 0 auto;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
