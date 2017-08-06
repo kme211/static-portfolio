@@ -201,19 +201,19 @@
     picture.classList.add("giffer-viewer__gif");
     var smSource = document.createElement("source");
     smSource.srcset =
-      "http://res.cloudinary.com/ddy54k4ks/image/upload/w_400/q_auto" +
+      "https://res.cloudinary.com/ddy54k4ks/image/upload/w_400/q_auto" +
       e.target.dataset.gif;
     smSource.media = "(max-width: 400px)";
     picture.appendChild(smSource);
     var mdSource = document.createElement("source");
     mdSource.srcset =
-      "http://res.cloudinary.com/ddy54k4ks/image/upload/w_550/q_auto" +
+      "https://res.cloudinary.com/ddy54k4ks/image/upload/w_550/q_auto" +
       e.target.dataset.gif;
     mdSource.media = "(min-width: 401px) and (max-width: 550px)";
     picture.appendChild(mdSource);
     var img = document.createElement("img");
     img.src =
-      "http://res.cloudinary.com/ddy54k4ks/image/upload/w_700/q_auto" +
+      "https://res.cloudinary.com/ddy54k4ks/image/upload/w_700/q_auto" +
       e.target.dataset.gif;
     img.alt = e.target.dataset.name + " animation";
     picture.appendChild(img);
