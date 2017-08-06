@@ -1,4 +1,14 @@
 module.exports = [{
+  name: "SRT Maker",
+  date: "2017-08-06",
+  links: {
+    code: "https://github.com/kme211/srt-maker",
+    gif: "/v1502028846/portfolio/srt-maker-animated.gif"
+  },
+  imgUrl: "/v1502028772/portfolio/srt-maker.png",
+  desc: "A tool for easily creating subtitle files for audio clips.",
+  tags: ["React", "Redux", "Electron"]
+},{
   name: "Weather app",
   date: "2017-07-10",
   links: {
