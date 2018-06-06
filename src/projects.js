@@ -21,24 +21,24 @@ module.exports = [
     desc: "A tool for easily creating subtitle files for audio clips.",
     tags: ["React", "Redux", "Electron"]
   },
-  {
-    name: "Weather app",
-    date: "2017-07-10",
-    links: {
-      code: "https://github.com/kme211/weather-app",
-      demo: "https://kearieggers.com/weather/"
-    },
-    imgUrl: "/v1499719784/portfolio/weatherNow.png",
-    desc: "Mobile-first web app for checking the weather.",
-    tags: [
-      "React",
-      "ES2015",
-      "Third-Party API",
-      "Geolocation",
-      "Google Maps",
-      "Canvas"
-    ]
-  },
+  // {
+  //   name: "Weather app",
+  //   date: "2017-07-10",
+  //   links: {
+  //     code: "https://github.com/kme211/weather-app",
+  //     demo: "https://kearieggers.com/weather/"
+  //   },
+  //   imgUrl: "/v1499719784/portfolio/weatherNow.png",
+  //   desc: "Mobile-first web app for checking the weather.",
+  //   tags: [
+  //     "React",
+  //     "ES2015",
+  //     "Third-Party API",
+  //     "Geolocation",
+  //     "Google Maps",
+  //     "Canvas"
+  //   ]
+  // },
   {
     name: "Game of Life",
     date: "2017-05-22",
@@ -50,17 +50,17 @@ module.exports = [
     desc: "Cellular automaton based off of Conway's Game of Life.",
     tags: ["React", "ES2015"]
   },
-  {
-    name: "fodmapr",
-    date: "2017-01-16",
-    links: {
-      code: "https://github.com/kme211/fodmapr",
-      demo: "https://fodmapr.net/"
-    },
-    imgUrl: "/v1498399970/portfolio/fodmapr.png",
-    desc: "Allows users to quickly check if a food is low/high on the FODMAP spectrum.",
-    tags: ["Service workers", "Offline capability"]
-  },
+  // {
+  //   name: "fodmapr",
+  //   date: "2017-01-16",
+  //   links: {
+  //     code: "https://github.com/kme211/fodmapr",
+  //     demo: "https://fodmapr.net/"
+  //   },
+  //   imgUrl: "/v1498399970/portfolio/fodmapr.png",
+  //   desc: "Allows users to quickly check if a food is low/high on the FODMAP spectrum.",
+  //   tags: ["Service workers", "Offline capability"]
+  // },
   {
     name: "Bender Quotes",
     date: "2017-02-26",

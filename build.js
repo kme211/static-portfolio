@@ -5,6 +5,7 @@ const sass = require("node-sass");
 const chalk = require("chalk");
 const development = argv.env !== "production";
 const kebabCase = require("./tools/kebabCase");
+const experience = require("./src/experience");
 let projects = require("./src/projects");
 
 const logMsg = msg => console.log(chalk.blue(msg));
@@ -110,7 +111,7 @@ if (development) {
   });
 
   app.get("/", (req, res) => {
-    res.render("index.html", { projects, tagCloud });
+    res.render("index.html", { projects, tagCloud, experience });
   });
 
   app.get("/css/style.css", (req, res) => {
@@ -132,7 +133,7 @@ if (development) {
   logMsg("Building index.html...");
 
   nunjucks.configure("src/views");
-  const rendered = nunjucks.render("index.html", { projects, tagCloud });
+  const rendered = nunjucks.render("index.html", { projects, tagCloud, experience });
   fs.writeFile("./dist/index.html", rendered, () =>
     logSuccess("index.html written to dist/index.html")
   );

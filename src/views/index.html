@@ -51,7 +51,7 @@
     </div>
     <nav>
       <ul role="navigation" class="hidden">
-        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience &amp; Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         {#
         <li><a href="#">Contact</a></li>#}
@@ -63,7 +63,7 @@
     <div class="main-header__content">
       <h1 class="main-header__name">Hi, I'm Keari.</h1>
       <p class="main-header__desc">
-        I'm a self-taught web developer based in Fort Worth, TX.
+        I'm a full stack web developer based in Fort Worth, TX. I'm focused on writing maintainable, performant, and testable code. 
       </p>
       <div class="main-header__social">
         <a href="https://twitter.com/kearieggers" target="_blank">
@@ -105,30 +105,30 @@
     </div>
   </div>
 
-  <section class="about" id="about">
-    <h1 class="about__title section-title">About</h1>
-    <div class="about__content">
-      <div class="about__desc">
-        <p>
-          I have been programming in an e-learning environment for over 5 years and am looking for more challenging opportunities in
-          the world of web development. I originally graduated from the Art Institute of Seattle's video production program
-          and landed a job running web conferences at the University of Washington's School of Nursing's e-learning department.
-          I took the opportunity to help with developing Flash-based e-learning modules which kickstarted my love of coding.
-        </p>
-        <p>
-          I currently work at an e-learning solutions provider where I was given the opportunity to hone my HTML5/CSS/Javascript skills.
-          I wrote and currently maintain an e-learning curriculum front-end for viewing how far you are in your learning
-          journey, viewing how many awards you've earned, and launching courses. I also write NodeJS scripts to perform tedious
-          internal tasks such as replacing content with translated content.
-        </p>
+  <section class="experience" id="experience">
+    <h1 class="experience__title section-title">Experience &amp; Skills</h1>
+    <div class="experience__content">
+      <div class="experience__list-items">
+        {% for work in experience %}
+          <div class="company">
+            <div class="company__title">{{ work.title }}</div>
+            <div class="company__name">{{ work.companyName }}</div>
+            <div class="company__dates">{{ work.dates[0] }} - {{ work.dates[1] }}</div>
+            <ul>
+              {% for bullet in work.bullets %}
+                <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
       </div>
 
-      <aside class="about__strengths">
+      <aside class="experience__strengths">
         <ul>
           <li>Javascript</li>
-          <li>ES2015</li>
           <li>React</li>
-          <li>Node</li>
+          <li>Redux</li>
+          <li>Node.js</li>
           <li>Express</li>
           <li>Webpack</li>
           <li>Mocha</li>

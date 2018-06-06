@@ -1,4 +1,4 @@
-.about {
+.experience {
   &__content {
     display: flex;
     flex-flow: row wrap;
@@ -7,7 +7,7 @@
       margin: 1rem;
     }
   }
-  &__desc {
+  &__list-items {
     flex: 1 100%;
     margin-right: $margin;
   }
@@ -22,12 +22,27 @@
   }
 }
 
+.company {
+  margin: 0 0 1rem 0;
+  * {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  &__title {
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+  ul {
+    margin: 1rem 0 0 1rem; 
+  }
+}
+
 @media screen and (min-width: 700px) {
-  .about {
+  .experience {
     &__content > * {
       margin: 0;
     }
-    &__desc {
+    &__list-items {
       flex-basis: 450px;
     }
     &__strengths {

@@ -177,6 +177,10 @@ nav ul {
   .main-header {
     font-size: 20px; } }
 
+@media screen and (max-width: 1357px) {
+  .main-header__desc {
+    max-width: 680px; } }
+
 .sticky-header {
   background: #393E46;
   color: #EEEEEE;
@@ -220,31 +224,42 @@ nav ul {
         color: #00ADB5;
         border: none; }
 
-.about__content {
+.experience__content {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start; }
-  .about__content > * {
+  .experience__content > * {
     margin: 1rem; }
 
-.about__desc {
+.experience__list-items {
   flex: 1 100%;
   margin-right: 50px; }
 
-.about__strengths {
+.experience__strengths {
   flex: 1 100%;
   font-size: 2rem;
   text-align: center;
   line-height: 2.5rem; }
-  .about__strengths ul {
+  .experience__strengths ul {
     list-style-type: none; }
 
+.company {
+  margin: 0 0 1rem 0; }
+  .company * {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem; }
+  .company__title {
+    font-weight: bolder;
+    font-size: 1rem; }
+  .company ul {
+    margin: 1rem 0 0 1rem; }
+
 @media screen and (min-width: 700px) {
-  .about__content > * {
+  .experience__content > * {
     margin: 0; }
-  .about__desc {
+  .experience__list-items {
     flex-basis: 450px; }
-  .about__strengths {
+  .experience__strengths {
     flex-basis: auto;
     text-align: right; } }
 
