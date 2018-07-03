@@ -7,11 +7,12 @@
     "styles:dev": "stylus -w src/styles/style.styl -o dist/css/style.css",
     "styles:prod": "stylus src/styles/style.styl -o dist/css/style.css",
     "js:prod": "babel src/main.js | uglifyjs -c -m -o dist/js/main.js",
-    "prebuild": "node tools/build.setup.js",
+    "build:setup": "node tools/build.setup.js",
     "build:dev": "nodemon tools/build.js --env=dev",
     "build:prod": "node tools/build.js --env=production",
+    "prestart": "npm run build:setup",
     "start": "npm-run-all -p styles:dev build:dev",
-    "build": "npm-run-all -s styles:prod build:prod js:prod"
+    "build": "npm-run-all -s build:setup styles:prod build:prod js:prod"
   },
   "author": "Keari Eggers <kungfu.keari@gmail.com>",
   "license": "MIT",
