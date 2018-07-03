@@ -1,0 +1,36 @@
+.experience
+  &__content
+    display: flex
+    flex-flow: row wrap
+    align-items: flex-start
+    & > *
+      margin: 1rem
+  &__list-items
+    flex: 1 100%
+    margin-right: $margin
+  &__strengths
+    flex: 1 100%
+    font-size: 2rem
+    text-align: center
+    line-height: 2.5rem
+    & ul
+      list-style-type: none
+.company
+  margin: 0 0 1rem 0
+  *
+    font-size: 0.8rem
+    margin-bottom: 0.5rem
+  &__title
+    font-weight: bolder
+    font-size: 1rem
+  ul
+    margin: 1rem 0 0 1rem
+@media screen and (min-width: 700px)
+  .experience
+    &__content > *
+      margin: 0
+    &__list-items
+      flex-basis: 450px
+    &__strengths
+      flex-basis: auto
+      text-align: right

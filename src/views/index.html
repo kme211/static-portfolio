@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  {% if env === 'production' %} {% include "_ga.html" %} {% endif %}
   <meta charset="UTF-8">
   <meta name="description" content="Web developer specializing in React/NodeJS.">
   <meta name="keywords" content="HTML,CSS,Javascript,React,NodeJS,webpack,Mocha">
@@ -12,7 +13,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#222831">
   <meta name="author" content="Keari Eggers">
-  <title>Keari Eggers</title>
+  <title>{{ siteTitle }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -51,10 +52,16 @@
     </div>
     <nav>
       <ul role="navigation" class="hidden">
-        <li><a href="#experience">Experience &amp; Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li>
+          <a href="#experience">Experience &amp; Skills</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
         {#
-        <li><a href="#">Contact</a></li>#}
+        <li>
+          <a href="#">Contact</a>
+        </li>#}
       </ul>
     </nav>
   </div>
@@ -63,21 +70,27 @@
     <div class="main-header__content">
       <h1 class="main-header__name">Hi, I'm Keari.</h1>
       <p class="main-header__desc">
-        I'm a full stack web developer based in Fort Worth, TX. I'm focused on writing maintainable, performant, and testable code. 
+        I'm a front-end developer based in Fort Worth, TX. I'm focused on writing maintainable, performant, and testable code.
       </p>
       <div class="main-header__social">
         <a href="https://twitter.com/kearieggers" target="_blank">
           <svg class="icon icon-twitter">
             <use xlink:href="#icon-twitter"></use>
-          </svg> <span class="sticky-hide">Twitter</span></a>
+          </svg>
+          <span class="sticky-hide">Twitter</span>
+        </a>
         <a href="https://github.com/kme211" target="_blank">
           <svg class="icon icon-github">
             <use xlink:href="#icon-github"></use>
-          </svg> <span class="sticky-hide">GitHub</span></a>
+          </svg>
+          <span class="sticky-hide">GitHub</span>
+        </a>
         <a href="https://www.linkedin.com/in/keari" target="_blank">
           <svg class="icon icon-linkedin-square">
             <use xlink:href="#icon-linkedin-square"></use>
-          </svg> <span class="sticky-hide">LinkedIn</span></a>
+          </svg>
+          <span class="sticky-hide">LinkedIn</span>
+        </a>
       </div>
     </div>
   </div>
@@ -110,16 +123,16 @@
     <div class="experience__content">
       <div class="experience__list-items">
         {% for work in experience %}
-          <div class="company">
-            <div class="company__title">{{ work.title }}</div>
-            <div class="company__name">{{ work.companyName }}</div>
-            <div class="company__dates">{{ work.dates[0] }} - {{ work.dates[1] }}</div>
-            <ul>
-              {% for bullet in work.bullets %}
-                <li>{{ bullet }}</li>
-              {% endfor %}
-            </ul>
-          </div>
+        <div class="company">
+          <div class="company__title">{{ work.title }}</div>
+          <div class="company__name">{{ work.companyName }}</div>
+          <div class="company__dates">{{ work.dates[0] }} - {{ work.dates[1] }}</div>
+          <ul>
+            {% for bullet in work.bullets %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+        </div>
         {% endfor %}
       </div>
 
@@ -192,8 +205,8 @@
   </section>
   <footer>
     <div class="inner">
-      Website is generated using NodeJS, Nunjucks, and SCSS. The source is on <a href="https://github.com/kme211/static-portfolio"
-        target="_blank">GitHub</a>.
+      Website is generated using NodeJS, Nunjucks, and Stylus. The source is on
+      <a href="https://github.com/kme211/static-portfolio" target="_blank">GitHub</a>.
     </div>
   </footer>
   <div class="giffer-viewer hidden">

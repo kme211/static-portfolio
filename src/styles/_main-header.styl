@@ -1,0 +1,31 @@
+.main-header
+  height: 100vh
+  background: $primary-color
+  color: $white
+  padding: 0 1em
+  font-size: 14px
+  &__content
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    height: 100%
+  &__name
+    font-size: 3em
+  &__desc
+    margin: 1em 0
+    font-size: 1.2em
+  &__social
+    font-size: 0.84em
+    & > a
+      btn(1px)
+@media screen and (min-height: 850px)
+  .main-header
+    height: 60vh
+@media screen and (min-width: 920px)
+  .main-header
+    font-size: 20px
+@media screen and (max-width: 1357px)
+  .main-header__desc
+    max-width: 680px
