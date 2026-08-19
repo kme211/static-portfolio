@@ -188,6 +188,10 @@ document.querySelector("#app").innerHTML = `
       <a href="#work">Work</a>
       <a href="#archive">Archive</a>
       <a href="#contact">Contact</a>
+      <button class="theme-toggle" type="button" aria-pressed="false">
+        <span aria-hidden="true" class="theme-toggle__icon">☾</span>
+        <span class="theme-toggle__label">Dark</span>
+      </button>
     </nav>
   </header>
 
@@ -302,6 +306,31 @@ document.querySelector("#app").innerHTML = `
     <p>Designed and built by Keari Eggers. <a href="https://github.com/kme211/static-portfolio" target="_blank" rel="noreferrer">View source<span aria-hidden="true">↗</span></a>.</p>
   </footer>
 `;
+
+const themeToggle = document.querySelector(".theme-toggle");
+const themeColor = document.querySelector('meta[name="theme-color"]');
+
+function setTheme(theme) {
+  const isDark = theme === "dark";
+  document.documentElement.dataset.theme = theme;
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeToggle.querySelector(".theme-toggle__icon").textContent = isDark ? "☀" : "☾";
+  themeToggle.querySelector(".theme-toggle__label").textContent = isDark ? "Light" : "Dark";
+  themeColor.content = isDark ? "#07051e" : "#f4f1e9";
+}
+
+setTheme(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
+
+themeToggle.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  setTheme(nextTheme);
+
+  try {
+    localStorage.setItem("portfolio-theme", nextTheme);
+  } catch {
+    // The switch still works for this visit when storage is unavailable.
+  }
+});
 
 const contactForm = document.querySelector(".contact-form");
 const contactFormStatus = contactForm.querySelector(".form-status");
