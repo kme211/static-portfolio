@@ -1,5 +1,14 @@
 # static-portfolio
 
-This is my portfolio code repo.
+This is my personal portfolio, built as a small static site with Vite.
 
-All my projects are in `src/projects.js` and are injected into a Nunjucks template in `src/views/index.html`.
+Portfolio content is rendered from the modules in `src/`.
+
+## Local development
+
+```sh
+npm install
+npm run dev
+```
+
+Create a production build with `npm run build`.
