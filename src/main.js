@@ -24,11 +24,11 @@ const selectedWork = [
     eyebrow: "Personal product",
     title:
       "Treklet: an end-to-end product lab for modern frontend architecture",
-    status: "Staging",
+    status: "Independent product",
     summary:
-      "I’m building Treklet as a working product and a practical proving ground for the stack we adopted on the new Booking Engine. Owning the application end to end lets me evaluate React Router, Tailwind, and shadcn/ui in context, make deliberate architectural and service-interface tradeoffs, and refine a plan-first approach to AI-assisted development.",
+      "Treklet is a trip-planning product and a practical proving ground for the stack we adopted on the new Booking Engine. Owning the application end to end lets me evaluate React Router, Tailwind, and shadcn/ui in context, make deliberate architectural and service-interface tradeoffs, and refine a plan-first approach to AI-assisted development.",
     highlights: [
-      "Available in staging with a demo account where visitors can explore a sample trip, organize ideas, build an itinerary, and review budget and expense tools.",
+      "Visitors can explore a sample trip, organize ideas, build an itinerary, and review budget and expense tools.",
       "Personal ownership spans the product flow, interface architecture, and API decisions.",
       "The project provides a practical setting for evaluating patterns outside enterprise constraints before carrying the useful lessons forward.",
     ],
@@ -39,7 +39,7 @@ const selectedWork = [
       "Product architecture",
       "AI-assisted development",
     ],
-    links: [{ label: "Preview Treklet", href: "https://staging.treklet.app" }],
+    links: [{ label: "Explore Treklet", href: "https://treklet.app" }],
   },
 ];
 
